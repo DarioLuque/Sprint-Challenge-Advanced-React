@@ -11,7 +11,6 @@ const Header = () => {
     setDarkMode(!darkMode);
     console.log(darkMode)
   };
-
   
   return (
     <HeaderTop>
@@ -20,7 +19,7 @@ const Header = () => {
         <div
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
-        />
+        ><p>Dark</p></div>
       </div>
     </HeaderTop>
   );
