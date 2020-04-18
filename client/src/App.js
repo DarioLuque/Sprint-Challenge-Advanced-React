@@ -1,10 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 
-import PlayerData from './components/PlayerCard';
 import PlayerCard from './components/PlayerCard';
+import Header  from './components/Header';
 
 import styled from 'styled-components';
+import './App.css'
 
 
 
@@ -28,6 +29,7 @@ class App extends React.Component {
   render() {
     return(
       <Container>
+        <Header />
         {this.state.player.map((players, index) => {
           return <PlayerCard key={index} player={players} />
         })}
@@ -42,8 +44,8 @@ const Container = styled.div`
   margin: 0 auto;
   width: 80%;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
 `;
